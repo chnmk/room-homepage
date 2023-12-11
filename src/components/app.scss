@@ -1,3 +1,125 @@
-* {
-    color: red;
+@font-face {
+    font-family: "League Spartan";
+    src: url("../assets/fonts/LeagueSpartan-VariableFont_wght.ttf");
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-family: "League Spartan", serif;
+    margin: 0px;
+}
+
+$dark-gray: hsl(0, 0%, 63%);
+$very-dark-gray: hsl(0, 0%, 27%);
+
+///==================
+/// Upper-left block:
+
+.main-image {
+    background-size: cover;
+    background-position: left left;
+    background-repeat: no-repeat;
+    background-image: url("../assets/images/desktop-image-hero-1.jpg");
+    width: 70%;
+    height: 534px;
+    width: 840px;
+}
+
+.nav-menu {
+    padding: 5% 0 0 5%;
+}
+
+%default-link {
+    display:inline;
+    margin-right: 10px;
+    color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+%default-link-line {
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline 2px;
+        text-underline-offset: 10px;
+    }
+}
+
+.page-nav {
+    display: inline;
+    position: relative;
+    top: -34px;
+    left: 25px + 50px;
+
+    &__link-list{
+        list-style-type: none;
+    }
+    &__link-1 {
+        @extend %default-link;
+    }
+    &__link-2 {
+        @extend %default-link;
+    }
+    &__link-3 {
+        @extend %default-link;
+    }
+    &__link-4 {
+        @extend %default-link;
+    }
+    &__link-1-line {
+        @extend %default-link-line;
+    }
+    &__link-2-line {
+        @extend %default-link-line;
+    }
+    &__link-3-line {
+        @extend %default-link-line;
+    }
+    &__link-4-line {
+        @extend %default-link-line;
+    }
+}
+
+///==================
+/// Upper-right block:
+
+.main-desc {
+    width: 30%;
+}
+
+.desc-block {
+    padding: 15% 5% 15% 15%;
+
+    &__message {
+        font-size: 2.2rem;
+        font-weight: 600;
+        padding-bottom: 0px;
+    }
+    &__description {
+        padding-top: 0px;
+    }
+}
+
+///==================
+/// Bottom-left block:
+
+.image-about-1 {
+    width: 35%;
+}
+
+///==================
+/// Bottom-middle block:
+
+.about-desc {
+    width: 40%;
+}
+
+///==================
+/// Bottom-right block:
+
+.image-about-2 {
+    width: 25%;
 }
