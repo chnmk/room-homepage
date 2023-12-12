@@ -92,7 +92,7 @@ $very-dark-gray: hsl(0, 0%, 27%);
 
 .main-desc {
     grid-area: 1 / 7 / 5 / 11;
-    //max-width: 525px;
+    position: relative;
 }
 
 .desc-block {
@@ -113,12 +113,38 @@ $very-dark-gray: hsl(0, 0%, 27%);
         margin-top: 1.4rem;
         &:hover {
             cursor: pointer;
+            color: $dark-gray;
+            filter: invert(65%) sepia(0%) saturate(1833%) hue-rotate(150deg) brightness(103%) contrast(79%);
         }
     }
 
     &__link-text {
         font-weight: 500;
         letter-spacing: 0.2rem;
+    }
+}
+
+%arrow_default {
+    background-color: black;
+    padding: 25px 30px 25px 30px;
+    &:hover {
+        cursor: pointer;
+        background-color: $very-dark-gray;
+    }
+}
+
+.switch-images {
+    position: absolute;
+    bottom:0;
+    left:0;
+    // remove whitespace between icons:
+    font-size: 0px;
+
+    &__right {
+        @extend %arrow_default;
+    }
+    &__left {
+        @extend %arrow_default;
     }
 }
 
