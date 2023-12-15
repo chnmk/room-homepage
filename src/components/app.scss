@@ -74,6 +74,9 @@ $very-dark-gray: hsl(0, 0%, 27%);
 
     &__mobile-menu {
         margin: 0 40% 0 2%;
+        &:hover {
+            cursor: pointer;
+        }
         @media screen and (width >= 768px) {
             display: none;
         } 
@@ -206,10 +209,6 @@ $very-dark-gray: hsl(0, 0%, 27%);
 ///==================
 /// Bottom-left block:
 
-
-// TODO: use different images for mobile
-
-
 .image-about-1 {
     grid-area: 5 / 1 / 7 / 4;
     /*
@@ -219,7 +218,7 @@ $very-dark-gray: hsl(0, 0%, 27%);
     }
     */
     background-size: cover;
-    background-position: left center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-image: url("../assets/images/image-about-dark.jpg");
     @media screen and (width < 768px) {
@@ -263,7 +262,7 @@ $very-dark-gray: hsl(0, 0%, 27%);
     }
     */
     background-size: cover;
-    background-position: left center;
+    background-position: center center;
     background-repeat: no-repeat;
     background-image: url("../assets/images/image-about-light.jpg");
     @media screen and (width < 768px) {
