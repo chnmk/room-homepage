@@ -9,6 +9,8 @@ const secondPageDescription = "With stores all over the world, it's easy for you
 const thirdPageDescription = "Our modern furniture store provide a high level of quality. Our company has invested in advanced technology\nto ensure that every product is made as perfect and as consistent as possible. With three decades of\nexperience in this industry, we understand what customers want for their home and office."
 
 const imageElement = document.getElementsByClassName("main-image")[0];
+const openHamburgerElement = document.getElementsByClassName("nav-menu__mobile-menu")[0];
+const closeHamburgerElement = document.getElementsByClassName("nav-menu__mobile-menu-close")[0];
 
 let currentPage = 1
 
@@ -60,4 +62,14 @@ window.changePrevious = function() {
         document.getElementsByClassName("desc-block__message")[0].innerHTML = thirdPageMessage
         document.getElementsByClassName("desc-block__description")[0].innerHTML = thirdPageDescription
     }
+}
+
+window.openHamburger = function() {
+    openHamburgerElement.classList.add("nav-menu__mobile-menu--disabled")
+    closeHamburgerElement.classList.remove("nav-menu__mobile-menu-close--disabled")
+}
+
+window.closeHamburger = function() {
+    closeHamburgerElement.classList.add("nav-menu__mobile-menu-close--disabled")
+    openHamburgerElement.classList.remove("nav-menu__mobile-menu--disabled")
 }
