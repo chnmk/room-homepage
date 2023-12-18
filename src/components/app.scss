@@ -99,7 +99,7 @@ $very-dark-gray: hsl(0, 0%, 27%);
 .nav-menu {
     padding: 5% 0 0 5%;
     @media screen and (width < 768px) {
-        padding-top: 8%;
+        padding-top: 2rem;
     } 
 
     &__mobile-menu-close {

@@ -20,6 +20,7 @@ const linkElement3 = document.getElementsByClassName("page-nav__link-3")[0]
 const linkElement4 = document.getElementsByClassName("page-nav__link-4")[0]
 
 let currentPage = 1
+let isHamburgerOpen = false
 
 window.changeNext = function() {
     if (currentPage === 1) {
@@ -81,6 +82,7 @@ window.openHamburger = function() {
     linkElement3.classList.add("page-nav__link-3--mobile-enabled")
     linkElement4.classList.add("page-nav__link-4--mobile-enabled")
     navBackgroundElement.classList.add("nav-menu-mobile-enabled")
+    isHamburgerOpen = true
 }
 
 window.closeHamburger = function() {
@@ -93,4 +95,13 @@ window.closeHamburger = function() {
     linkElement3.classList.remove("page-nav__link-3--mobile-enabled")
     linkElement4.classList.remove("page-nav__link-4--mobile-enabled")
     navBackgroundElement.classList.remove("nav-menu-mobile-enabled")
+    isHamburgerOpen = false
 }
+
+window.addEventListener("resize", function() {
+    if (isHamburgerOpen === true) {
+        if (document.body.clientWidth >= 768) {
+            window.closeHamburger()
+        }
+    }
+})
