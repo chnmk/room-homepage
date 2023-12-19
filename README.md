@@ -16,7 +16,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL (*TODO: update link): [Vercel deployment](https://room-homepage-git-main-chnmks-projects.vercel.app/)
+- Solution URL: [Vercel deployment](https://room-homepage-git-main-chnmks-projects.vercel.app/)
 
 ### Built with
 
@@ -24,8 +24,3 @@ Users should be able to:
 - Grid
 - SCSS
 - BEM
-
-### TODO
-
-* Add navigation
-* Mobile layout
