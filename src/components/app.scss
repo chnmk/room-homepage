@@ -44,6 +44,7 @@ $very-dark-gray: hsl(0, 0%, 27%);
 }
 
 %default-link-line {
+    transition: 300ms;
     &:hover {
         cursor: pointer;
         text-decoration: underline 2px;
@@ -54,9 +55,11 @@ $very-dark-gray: hsl(0, 0%, 27%);
 %arrow_default {
     background-color: black;
     padding: 25px 30px 25px 30px;
+    transition: background-color 350ms;
     &:hover {
         cursor: pointer;
         background-color: $very-dark-gray;
+        transition: background-color 350ms;
     }
 }
 
@@ -248,10 +251,16 @@ $very-dark-gray: hsl(0, 0%, 27%);
 
     &__link {
         margin-top: 1.4rem;
+        transition: 
+            color 350ms,
+            filter 350ms;
         &:hover {
             cursor: pointer;
             color: $dark-gray;
             filter: invert(65%) sepia(0%) saturate(1833%) hue-rotate(150deg) brightness(103%) contrast(79%);
+            transition: 
+                color 350ms,
+                filter 350ms;
         }
     }
 
