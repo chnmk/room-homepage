@@ -71,6 +71,7 @@ $very-dark-gray: hsl(0, 0%, 27%);
     background-size: cover;
     background-position: bottom center;
     background-repeat: no-repeat;
+    transition: 2s;
     @media screen and (width < 768px) {
         width: 100%;
         height: 360px;
@@ -93,6 +94,7 @@ $very-dark-gray: hsl(0, 0%, 27%);
     }
     &--img-3 {
         background-image: url("../assets/images/desktop-image-hero-3.jpg");
+        background-position: top left;
         @media screen and (width < 768px) {
             background-image: url("../assets/images/mobile-image-hero-3.jpg");
         }
